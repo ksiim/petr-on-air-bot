@@ -11,3 +11,5 @@ class User(Base):
     full_name: Mapped[str]
     username: Mapped[str] = mapped_column(nullable=True)
     admin: Mapped[bool] = mapped_column(default=False)
+    bought: Mapped[bool] = mapped_column(default=False)
+    sended: Mapped[bool] = mapped_column(default=False)
