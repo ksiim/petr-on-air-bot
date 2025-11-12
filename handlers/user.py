@@ -22,8 +22,8 @@ async def start_message_handler(message: Message, state: FSMContext):
     
     await Orm.create_user(message)
     await send_start_message(message)
-    await asyncio.sleep(5)
-    # await asyncio.sleep(60*60*24)
+    # await asyncio.sleep(5)
+    await asyncio.sleep(60*60*24)
     await send_mail(message.from_user.id)
     
 async def send_mail(telegram_id):
